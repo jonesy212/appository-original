@@ -18,7 +18,21 @@
               }
             ]
           }
+        ],
+        "no-unused-vars": [
+          1,
+          { "args": "after-used", "argsIgnorePattern": "^_" }
         ]
+      }
+    },
+    {
+      "files":["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "extends": ["next", "next/core-web-vitals", "    "],
+      "globals": {
+        "React": "readonly"
+      },
+      "rules": {
+        "no-unused-vars": [1, { "args": "after-used", "argsIgnorePattern": "^_" }]
       }
     },
     {
