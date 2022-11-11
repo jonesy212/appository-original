@@ -1,0 +1,8 @@
+Possible global style with web-pack config solution
+https://stackoverflow.com/questions/68923383/how-can-i-create-a-global-stylesheet-to-share-scss-variables-in-a-nx-**react**-proje
+
+
+//added packages in pnpm.workspace.yaml:
+- 'apps/**'
+- 'libs/**'
+

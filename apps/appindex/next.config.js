@@ -13,6 +13,9 @@ const nextConfig = {
     // See: https://github.com/gregberge/svgr
     svgr: false,
   },
+  experimental: {
+    transpilePackages: ['@acme/ui', 'lodash-es'],
+  },
 };
 
 

@@ -1,0 +1,28 @@
+name: SimplePipeline
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  lintTest: 
+    # steps
+    name: Lint
+    # system running on
+    runs-on: ubuntu-latest
+    # all the steps running in thhis job
+    steps:
+      # hyphen - basically an array
+      - name: Clone Repository
+        uses: actions/checkout@v2
+      - name: Install Dependencies
+        # run script or commands in ubuntu
+        run: |
+          echo "Running Install Dependencies"
+          npm install
+      - name: Run Linting
+        run: |
+          echo "Running Linting tests..."
+          npm run lint
+        env:
+          CI: true
