@@ -6,11 +6,9 @@
   "scripts": {
     "start": "nx serve",
     "build": "nx build",
-
     "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,json,css,scss,md}'",
     "prepare": "husky install",
     "remote": "nx serve shell --open --devRemotes=remote",
-
     "pre-push": "npm-run-all pre-push:test lint",
     "pre-push:test": "prepush-if-changed",
     "lint": "npm-run-all lint:eslint lint:tsc",
@@ -30,6 +28,8 @@
     "tsc-files": "^1.1.3"
   },
   "dependencies": {
+    "@babel/core": "^7.20.2",
+    "@babel/plugin-proposal-private-methods": "^7.18.6",
     "typescript": "^4.8.4"
   }
 }
