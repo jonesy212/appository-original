@@ -21,7 +21,7 @@ export function App() {
         <Routes>
           <Route path="/" element={<NxWelcome title="shell" />} />
 
-          <Route path="/user" element={<Remote />} />
+          <Route path="/remote" element={<Remote />} />
         </Routes>
       </React.Suspense>
     </DataProvider>

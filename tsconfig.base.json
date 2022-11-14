@@ -15,7 +15,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@appository/is-even": ["libs/is-even/src/index.ts"]
+      "@appository/is-even": ["libs/is-even/src/index.ts"],
+      "@appository/shared/data-context": [
+        "libs/shared/data-context/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

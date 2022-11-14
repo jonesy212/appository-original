@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
 
-import MfComponent from './mf-component';
+import GlobalStyles from './global-styles';
 
-describe('MfComponent', () => {
+describe('GlobalStyles', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<MfComponent />);
+    const { baseElement } = render(<GlobalStyles />);
     expect(baseElement).toBeTruthy();
   });
 });

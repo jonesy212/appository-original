@@ -1,0 +1,34 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nx serve",
+    "build": "nx build",
+    "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,json,css,scss,md}'",
+    "prepare": "husky install",
+    "remote": "nx serve shell --open --devRemotes=remote",
+
+    "lint": "npm-run-all lint:eslint lint:tsc",
+    "lint:eslint": "eslint 'src/**/*.ts'",
+    "lint:tsc": "tsc -p tsconfig.json",
+    "test": "nx test npm run test:unit && npm run test:e2e",
+    "test:unit": "jest --runInBand",
+    "test:e2e": "jest --config ./test/jest-e2e.json"
+  },
+  "prepush-if-changed": {
+    "src/**/*.+(ts)": "echo 'Files changed on backend. Launching tests.' && npm run test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tsc-files": "^1.1.3"
+  },
+  "dependencies": {
+    "@babel/core": "^7.20.2",
+    "@babel/plugin-proposal-private-methods": "^7.18.6",
+    "typescript": "^4.8.4"
+  }
+}
