@@ -4,6 +4,7 @@ specifiers:
   '@babel/core': ^7.20.2
   '@commitlint/cli': ^17.2.0
   '@commitlint/config-conventional': ^17.2.0
+  '@commitlint/config-nx-scopes': ^17.2.0
   '@nestjs/common': ^9.0.0
   '@nestjs/core': ^9.0.0
   '@nestjs/microservices': ^9.1.6
@@ -74,6 +75,7 @@ specifiers:
 
 dependencies:
   '@babel/core': 7.20.2
+  '@commitlint/config-nx-scopes': 17.2.0_nx@15.0.7
   '@nestjs/common': 9.2.0_yzt46al3aifnexifjjdb4dxxja
   '@nestjs/core': 9.2.0_wa6q7ilagyvj47l3ncr6fpacjq
   '@nestjs/microservices': 9.2.0_fptmb26m37y4cwlu6vktl6lm6y
@@ -1451,6 +1453,18 @@ packages:
     dependencies:
       conventional-changelog-conventionalcommits: 5.0.0
     dev: true
+
+  /@commitlint/config-nx-scopes/17.2.0_nx@15.0.7:
+    resolution: {integrity: sha512-VEcblBqvJvI6HDwcffsCQB65IgQvdhBsQVgMkV+PE7Q8E/5RegvM3246jujSj62U3fp5SZz99oaax/lTjDWz+A==}
+    engines: {node: '>=v14'}
+    peerDependencies:
+      nx: ^14.0.0 || ^15.0.0
+    peerDependenciesMeta:
+      nx:
+        optional: true
+    dependencies:
+      nx: 15.0.7_@swc+core@1.3.14
+    dev: false
 
   /@commitlint/config-validator/17.1.0:
     resolution: {integrity: sha512-Q1rRRSU09ngrTgeTXHq6ePJs2KrI+axPTgkNYDWSJIuS1Op4w3J30vUfSXjwn5YEJHklK3fSqWNHmBhmTR7Vdg==}

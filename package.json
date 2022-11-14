@@ -12,7 +12,6 @@
     "lint": "npm-run-all lint:backend lint:appindex",
     "lint:backend": "cd ./app/backend && npm run lint:staged",
     "lint:frontend": "cd ./app/appindex && npm run lint:staged"
-
   },
   "prepush-if-changed": {
     "src/**/*.+(ts|tsx)": "echo 'Files changed on frontend. Launching tests.' && npm run test -- --watchAll=false"
@@ -30,6 +29,7 @@
   "private": true,
   "dependencies": {
     "@babel/core": "^7.20.2",
+    "@commitlint/config-nx-scopes": "^17.2.0",
     "@nestjs/common": "^9.0.0",
     "@nestjs/core": "^9.0.0",
     "@nestjs/microservices": "^9.1.6",
