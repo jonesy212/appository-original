@@ -8,16 +8,11 @@
     "test": "nx test",
     "remote": "nx serve shell --open --devRemotes=remote",
     "prepare": "husky install",
-
     "lint:staged": "lint-staged",
+    "lint": "npm-run-all lint:backend lint:appindex",
+    "lint:backend": "cd ./app/backend && npm run lint:staged",
+    "lint:frontend": "cd ./app/appindex && npm run lint:staged"
 
-    "lint": "npm-run-all lint:backend lint:frontend",
-    "lint:backend": "cd backend && npm run lint:staged",
-    "lint:frontend": "cd frontend && npm run lint:staged",
-
-    "pre-push": "npm-run-all pre-push:backend pre-push:frontend",
-    "pre-push:frontend": "cd frontend && npm run pre-push",
-    "pre-push:backend": "cd backend && npm run pre-push"
   },
   "prepush-if-changed": {
     "src/**/*.+(ts|tsx)": "echo 'Files changed on frontend. Launching tests.' && npm run test -- --watchAll=false"
@@ -32,7 +27,6 @@
     ],
     "*.js": "eslint --cache --fix"
   },
-  
   "private": true,
   "dependencies": {
     "@babel/core": "^7.20.2",
@@ -40,8 +34,7 @@
     "@nestjs/core": "^9.0.0",
     "@nestjs/microservices": "^9.1.6",
     "@nestjs/platform-express": "^9.0.0",
-    "@nrwl/next": "^15.0.7",
-    "@teambit/bvm.remove": "^0.0.43",
+    "@nrwl/next": "15.0.13",
     "core-js": "^3.6.5",
     "husky": "^8.0.2",
     "next": "13.0.0",
@@ -63,21 +56,21 @@
     "@nestjs/schematics": "^9.0.0",
     "@nestjs/testing": "^9.0.0",
     "@nrwl/cli": "15.0.7",
-    "@nrwl/cypress": "15.0.7",
+    "@nrwl/cypress": "15.0.13",
     "@nrwl/eslint-plugin-nx": "15.0.7",
-    "@nrwl/jest": "15.0.10",
+    "@nrwl/jest": "15.0.13",
     "@nrwl/linter": "15.0.7",
     "@nrwl/nest": "15.0.10",
     "@nrwl/node": "15.0.10",
     "@nrwl/nx-cloud": "latest",
-    "@nrwl/react": "15.0.7",
-    "@nrwl/web": "15.0.7",
+    "@nrwl/react": "15.0.13",
+    "@nrwl/web": "15.0.13",
     "@nrwl/workspace": "15.0.7",
     "@swc/core": "^1.2.173",
     "@swc/jest": "0.2.20",
     "@testing-library/react": "13.4.0",
     "@types/jest": "28.1.1",
-    "@types/node": "18.7.1",
+    "@types/node": "18.7.18",
     "@types/react": "18.0.20",
     "@types/react-dom": "18.0.6",
     "@types/react-is": "17.0.3",
@@ -87,7 +80,7 @@
     "babel-jest": "28.1.1",
     "babel-plugin-styled-components": "1.10.7",
     "commitizen": "^4.2.5",
-    "cypress": "^10.11.0",
+    "cypress": "^10.7.0",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "~8.15.0",
     "eslint-config-next": "13.0.0",

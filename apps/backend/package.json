@@ -9,8 +9,7 @@
     "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,json,css,scss,md}'",
     "prepare": "husky install",
     "remote": "nx serve shell --open --devRemotes=remote",
-    "pre-push": "npm-run-all pre-push:test lint",
-    "pre-push:test": "prepush-if-changed",
+
     "lint": "npm-run-all lint:eslint lint:tsc",
     "lint:eslint": "eslint 'src/**/*.ts'",
     "lint:tsc": "tsc -p tsconfig.json",
