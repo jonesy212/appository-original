@@ -25,7 +25,10 @@ const prodConfig = {
    *   ['app2', '//example.com/path/to/app2/remoteEntry.js'],
    * ]
    */
-  remotes: [['remote', '//localhost:4201/']],
+  remotes: [
+    ['remote', '//localhost:4201/'],
+    ['dashboard', '//localhost:4202'],
+  ],
 };
 
 module.exports = withModuleFederation(prodConfig);

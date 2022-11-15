@@ -6,7 +6,7 @@ const baseConfig = require('./module-federation.config');
 /**
  * @type {import('@nrwl/react/module-federation').ModuleFederationConfig}
  **/
-const prodConfig = {
+const defaultConfig = {
   ...baseConfig,
 
 
@@ -28,8 +28,9 @@ const prodConfig = {
    * ]
    */
  remotes: [
-  ['remote', '//localhost:4201/'],
+   ['remote', '//localhost:4201/'],
+   ['dashboard', '//localhost:4202/'],
 ],
 };
 
-module.exports = withModuleFederation(prodConfig);
+module.exports = withModuleFederation(defaultConfig);

@@ -2,3 +2,4 @@
 // Example declare module 'about/Module';
 
 declare module 'remote/Module';
+declare module 'dashboard/Module';
