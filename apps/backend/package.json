@@ -8,7 +8,6 @@
     "build": "nx build",
     "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,json,css,scss,md}'",
     "prepare": "husky install",
-    "remote": "nx serve shell --open --devRemotes=remote",
 
     "lint": "npm-run-all lint:eslint lint:tsc",
     "lint:eslint": "eslint 'src/**/*.ts'",
